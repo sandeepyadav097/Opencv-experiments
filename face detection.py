@@ -8,8 +8,10 @@ while True:
     ret, frame=cap.read();
 
     cv2.imshow('frame', frame);
-    cv2.waitKey(1);
-
+    k=cv2.waitKey(1);
+    if k & 0xFF == ord('q'):
+            break
+    
 
 
 cap.release();
