@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 
 
-image=cv2.imread('WaldoBeach.jpg')
+image=cv2.imread('me.jpg')
 cv2.imshow('waldo', image)
 cv2.waitKey(0)
 
 gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-template=cv2.imread('WaldoBeach.jpeg', 0)
+template=cv2.imread('eye.jpeg', 0)
 cv2.imshow('template', template)
 cv2.waitKey(0)
 result=cv2.matchTemplate(gray,template,cv2.TM_CCOEFF)
